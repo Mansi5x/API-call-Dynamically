@@ -1,0 +1,23 @@
+<p>servicemasterlist works!</p>
+<Button (click)="Getservicedata()">Add Value</Button>
+<table>
+  <tr>
+    <th>Client_ID</th>
+    <td>Property_ID</td>
+    <td>Service_ID</td>
+    <td>Name</td>
+    <td>Sort_Name</td>
+    <td>Service_Type</td>
+  </tr>
+  <tr *ngFor="let x of resultmode">
+    <td>{{x.Client_ID}}</td>
+    <td>{{x.Property_ID}}</td>
+    <td>{{x.Service_ID}}</td>
+    <td>{{x.Name}}</td>
+    <td>{{x.Sort_Name}}</td>
+    <td>{{x.Service_Type}}</td>
+  </tr>
+</table>
+<input #ClientId>   | 
+<input #PropertyId>
+<button (click)="Getdynamicval(ClientId.value,PropertyId.value)">Submit</button>
